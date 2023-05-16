@@ -1,0 +1,26 @@
+server:
+  port: 8888
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+#    threads:
+#      max: 50
+#      min-spare: 5
+
+spring:
+  application:
+    name: cns-config-service
+  cloud:
+    config:
+      server:
+        git:
+          searchPaths: cns-catalog-service
+          uri: https://github.com/cns-book-store/cns-config-repo
+          skipSslValidation: true
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+logging:
+  level:
+    inc.evil: debug

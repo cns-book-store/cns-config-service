@@ -1,0 +1,4 @@
+###
+GET http://localhost:8888/cns-catalog-service/default
+###
+GET http://localhost:8888/cns-catalog-service/prod
