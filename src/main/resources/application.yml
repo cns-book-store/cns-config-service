@@ -17,11 +17,11 @@ spring:
     config:
       server:
         git:
-          searchPaths: cns-catalog-service
+#          searchPaths: cns-catalog-service,cns-order-service
           uri: https://github.com/cns-book-store/cns-config-repo
           skipSslValidation: true
           default-label: main
-          timeout: 5
+          timeout: 10
           clone-on-start: true
           force-pull: true
 logging:
